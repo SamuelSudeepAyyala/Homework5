@@ -43,23 +43,27 @@ This branch includes the implementation of the command system where different co
 5. **Execute a command:**
     The program will prompt for user input. For example, to add two numbers:
     ```
-    Enter command: add
-    Enter first number: 5
-    Enter second number: 3
-    Result: 8
+    Type 'menu' to show menu
+    Type 'exit' to exit 
+    >>> menu
+    Welcome to the Basic Calcualator.
+    Select the operation to be performed
+    Add
+    Subtract
+    Multiply
+    Divide
+    >>> add
+    Enter two space-seperated numbers: 23 2
+    Addition result: 25
     ```
-
-## How to Add New Commands
-
-To add new commands, follow these steps:
-
-1. Create a new Python file in the `commands/` folder.
-2. Define a class that implements the command functionality. Ensure it follows the structure of the existing `AddCommand` class.
-3. Update the command registry in `main.py` to include the new command.
 
 ## Running Tests
 
 To run the tests for this project:
+Results are stored in the folder **Results** for the main branch and the child branches.
 
 ```bash
-pytest test_main.py
+pytest 
+pytest --pylint
+pytest --pylint --cov
+```
